@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHANGEMAKER — Der Podcast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    :root {
+      --y: #e6ff2d;
+      --black: #0d0d0d;
+      --white: #ffffff;
+      --grey: #6b6b6b;
+      --border: #e5e5e5;
+      --hover: #f5f5f5;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--black);
+      font-family: 'Inter', -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px 80px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    /* ── Logo ── */
+    .logo img {
+      width: 260px;
+      height: auto;
+      display: block;
+    }
+
+    /* ── Platform links ── */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--black);
+      background: var(--white);
+      transition: border-color 0.18s, background 0.18s, transform 0.12s, box-shadow 0.18s;
+      position: relative;
+    }
+
+    .link:hover {
+      border-color: var(--black);
+      background: var(--hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    }
+
+    .link:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    /* Platform icon pill */
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .icon img {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: block;
+    }
+
+    /* Text */
+    .link-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .link-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--grey);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .link-name {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    /* Yellow accent on hover */
+    .link-cta {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--grey);
+      background: #f0f0f0;
+      padding: 6px 12px;
+      border-radius: 100px;
+      transition: background 0.18s, color 0.18s;
+      white-space: nowrap;
+    }
+
+    .link:hover .link-cta {
+      background: var(--y);
+      color: var(--black);
+    }
+
+    /* ── Description ── */
+    .desc {
+      font-size: 13px;
+      font-weight: 400;
+      color: #aaa;
+      text-align: center;
+      line-height: 1.7;
+      max-width: 380px;
+    }
+
+    /* ── Yellow bottom bar ── */
+    .bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--y);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <div class="logo">
+      <img src="changemaker-logo.jpg" alt="Changemaker">
+    </div>
+
+    <p class="desc">Hi, wir sind Yannick und Leon — In diesem Podcast teilen wir alles rund um Aufbau und Skalierung von digitalen Education-Business. Alles auf Basis von Insights aus dem Aufbau unserer eigenen Unternehmen und Learnings aus zahlreichen Kundenprojekten, bei denen wir Coaching-Businesses mit aufbauen.</p>
+
+    <div class="links">
+
+      <a href="https://open.spotify.com/show/033nmD1YuSArPWk0LUSvRn" target="_blank" rel="noopener" class="link">
+        <span class="icon">
+          <img src="icon-spotify.png" alt="Spotify">
+        </span>
+        <span class="link-text">
+          <span class="link-label">Hören auf</span>
+          <span class="link-name">Spotify</span>
+        </span>
+        <span class="link-cta">Öffnen</span>
+      </a>
+
+      <a href="https://podcasts.apple.com/us/podcast/changemaker/id1896823465" target="_blank" rel="noopener" class="link">
+        <span class="icon">
+          <img src="icon-apple-podcasts.jpg" alt="Apple Podcasts">
+        </span>
+        <span class="link-text">
+          <span class="link-label">Hören auf</span>
+          <span class="link-name">Apple Podcasts</span>
+        </span>
+        <span class="link-cta">Öffnen</span>
+      </a>
+
+      <a href="https://www.youtube.com/@changemaker-podcast" target="_blank" rel="noopener" class="link">
+        <span class="icon">
+          <img src="icon-youtube.jpg" alt="YouTube">
+        </span>
+        <span class="link-text">
+          <span class="link-label">Ansehen auf</span>
+          <span class="link-name">YouTube</span>
+        </span>
+        <span class="link-cta">Öffnen</span>
+      </a>
+
+      <a href="https://music.amazon.de/podcasts/42f40f90-8559-4d0b-a5d1-6c907a93954d/changemaker" target="_blank" rel="noopener" class="link">
+        <span class="icon">
+          <img src="icon-amazon-music.jpg" alt="Amazon Music">
+        </span>
+        <span class="link-text">
+          <span class="link-label">Hören auf</span>
+          <span class="link-name">Amazon Music</span>
+        </span>
+        <span class="link-cta">Öffnen</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="bar"></div>
+
+</body>
+</html>
