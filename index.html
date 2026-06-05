@@ -294,7 +294,7 @@
   <div class="wrap">
 
     <div class="logo">
-      <video id="logo-video" src="changemaker-logo.webm" autoplay muted playsinline></video>
+      <video id="logo-video" src="changemaker-logo.webm" autoplay muted playsinline preload="auto" poster="changemaker-logo.jpg"></video>
     </div>
 
     <p class="desc">Hi, wir sind Yannick und Leon — In diesem Podcast teilen wir alles rund um Aufbau und Skalierung von digitalen Education-Business. Alles auf Basis von Insights aus dem Aufbau unserer eigenen Unternehmen und Learnings aus zahlreichen Kundenprojekten, bei denen wir Coaching-Businesses mit aufbauen.</p>
@@ -379,16 +379,21 @@
   <script>
     const v = document.getElementById('logo-video');
     v.playbackRate = 0.3;
-    // Seek to first visible frame immediately so there's no blank flash
-    v.addEventListener('loadedmetadata', () => {
-      v.currentTime = 0.01;
-    });
     v.addEventListener('timeupdate', () => {
       if (v.currentTime >= 0.46) {
         v.pause();
         v.currentTime = 0.46;
       }
     });
+    // Explicit play for mobile
+    const tryPlay = () => {
+      v.play().catch(() => {});
+    };
+    if (v.readyState >= 2) {
+      tryPlay();
+    } else {
+      v.addEventListener('canplay', tryPlay, { once: true });
+    }
   </script>
 
 </body>
