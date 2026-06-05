@@ -50,7 +50,7 @@
 
     /* ── Logo ── */
     .logo video {
-      width: 340px;
+      width: 100%;
       height: auto;
       display: block;
     }
@@ -370,9 +370,12 @@
 
   <script>
     const v = document.getElementById('logo-video');
-    v.playbackRate = 0.5;
-    v.addEventListener('ended', () => {
-      v.pause();
+    v.playbackRate = 0.3;
+    v.addEventListener('timeupdate', () => {
+      if (v.currentTime >= 0.46) {
+        v.pause();
+        v.currentTime = 0.46;
+      }
     });
   </script>
 
