@@ -49,10 +49,18 @@
     }
 
     /* ── Logo ── */
-    .logo video {
+    .logo {
       width: 100%;
-      height: auto;
+      overflow: hidden;
+    }
+
+    .logo video {
       display: block;
+      width: 106%;
+      margin-left: -3%;
+      margin-top: -18%;
+      margin-bottom: -18%;
+      height: auto;
     }
 
     /* ── Platform links ── */
@@ -371,6 +379,10 @@
   <script>
     const v = document.getElementById('logo-video');
     v.playbackRate = 0.3;
+    // Seek to first visible frame immediately so there's no blank flash
+    v.addEventListener('loadedmetadata', () => {
+      v.currentTime = 0.01;
+    });
     v.addEventListener('timeupdate', () => {
       if (v.currentTime >= 0.46) {
         v.pause();
