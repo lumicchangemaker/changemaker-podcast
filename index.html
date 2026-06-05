@@ -50,7 +50,7 @@
 
     /* ── Logo ── */
     .logo video {
-      width: 260px;
+      width: 340px;
       height: auto;
       display: block;
     }
@@ -280,7 +280,7 @@
   <div class="wrap">
 
     <div class="logo">
-      <video src="changemaker-logo.webm" autoplay loop muted playsinline></video>
+      <video id="logo-video" src="changemaker-logo.webm" autoplay muted playsinline></video>
     </div>
 
     <p class="desc">Hi, wir sind Yannick und Leon — In diesem Podcast teilen wir alles rund um Aufbau und Skalierung von digitalen Education-Business. Alles auf Basis von Insights aus dem Aufbau unserer eigenen Unternehmen und Learnings aus zahlreichen Kundenprojekten, bei denen wir Coaching-Businesses mit aufbauen.</p>
@@ -361,6 +361,14 @@
   </div>
 
   <div class="bar"></div>
+
+  <script>
+    const v = document.getElementById('logo-video');
+    v.playbackRate = 0.5;
+    v.addEventListener('ended', () => {
+      v.pause();
+    });
+  </script>
 
 </body>
 </html>
