@@ -218,10 +218,12 @@
 
     .host-link {
       flex: 1;
+      min-width: 0;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 10px;
-      padding: 12px 14px;
+      gap: 8px;
+      padding: 16px 10px;
       border: 1.5px solid var(--border);
       border-radius: 14px;
       text-decoration: none;
@@ -236,8 +238,8 @@
     }
 
     .host-icon {
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -245,29 +247,36 @@
     }
 
     .host-icon svg {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       fill: var(--black);
     }
 
     .host-text {
       display: flex;
       flex-direction: column;
-      gap: 1px;
+      align-items: center;
+      gap: 2px;
+      min-width: 0;
+      max-width: 100%;
     }
 
     .host-handle {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
+      max-width: 100%;
+      text-align: center;
+      word-break: break-word;
+      line-height: 1.2;
     }
 
     .host-sub {
-      font-size: 10px;
-      font-weight: 500;
+      font-size: 9px;
+      font-weight: 600;
       color: var(--grey);
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
     }
 
     /* ── Yellow bottom bar ── */
@@ -294,15 +303,6 @@
     </div>
 
     <p class="desc">Hi, wir sind Yannick und Leon — In diesem Podcast teilen wir alles rund um Aufbau und Skalierung von digitalen Education-Business. Alles auf Basis von Insights aus dem Aufbau unserer eigenen Unternehmen und Learnings aus zahlreichen Kundenprojekten, bei denen wir Coaching-Businesses mit aufbauen.</p>
-
-    <!-- Social icons: Podcast Instagram + YouTube -->
-    <div class="social-row">
-<div class="social-icons">
-        <a href="https://www.instagram.com/changemaker.podcast" target="_blank" rel="noopener" class="social-icon" title="Instagram" data-event="click_instagram_podcast">
-          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-      </div>
-    </div>
 
     <div class="links">
 
@@ -352,8 +352,17 @@
 
     </div>
 
-    <!-- Hosts personal Instagram -->
+    <!-- Instagram accounts -->
     <div class="hosts-row">
+      <a href="https://www.instagram.com/changemaker.podcast" target="_blank" rel="noopener" class="host-link" data-event="click_instagram_podcast">
+        <span class="host-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </span>
+        <span class="host-text">
+          <span class="host-handle">@changemaker.podcast</span>
+          <span class="host-sub">Podcast</span>
+        </span>
+      </a>
       <a href="https://www.instagram.com/yannlck/" target="_blank" rel="noopener" class="host-link" data-event="click_yannick_ig">
         <span class="host-icon">
           <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
